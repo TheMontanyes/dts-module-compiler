@@ -1,0 +1,36 @@
+{
+  "name": "dts-module-compiler",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/dts-compiler.js",
+  "scripts": {
+    "prettier:fix": "prettier \"src/**/*.{ts,json,md}\" -l --write",
+    "prettier:check": "prettier \"src/**/*.{ts,json,md}\" -l --check",
+    "typecheck": "cross-env tsc --noEmit",
+    "build": "cross-env tsc",
+    "test": "jest",
+    "test:dts": "ts-node-transpile-only src/helpers/__tests__/dtsc-test.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheMontanyes/dts-module-compiler.git"
+  },
+  "author": "Denis Arkhipov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TheMontanyes/dts-module-compiler/issues"
+  },
+  "homepage": "https://github.com/TheMontanyes/dts-module-compiler#readme",
+  "dependencies": {
+    "typescript": "^5.0.4"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.1",
+    "@types/node": "^20.1.0",
+    "cross-env": "^7.0.3",
+    "jest": "^29.5.0",
+    "prettier": "^2.8.8",
+    "ts-jest": "^29.1.0",
+    "ts-node": "^10.9.1"
+  }
+}
