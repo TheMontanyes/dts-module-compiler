@@ -1,7 +1,7 @@
 import * as ts from 'typescript';
 import * as path from 'node:path';
 import { compile } from '../../dts-compiler';
-import tsConfig from '../../../tsconfig.json';
+import tsConfig from '../../../../tsconfig.json';
 
 const compilerOptions = tsConfig.compilerOptions as unknown as ts.CompilerOptions;
 
